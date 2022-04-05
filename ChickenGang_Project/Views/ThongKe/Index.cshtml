@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card bg-primary text-white h-100">
+            <div class="card-body py-5">
+                Tổng thành viên
+                <h3>@ViewBag.TongThanhVien</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-dark h-100">
+                <div class="card-body py-5">Tổng doanh thu
+                @{ decimal TongDoanhThu = decimal.Parse(ViewBag.TongDoanhThu.ToString());}
+                    <h3>@TongDoanhThu.ToString("0,000") VNĐ</h3>
+                </div>
+
+            </div>
+        </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-success text-white h-100">
+            <div class="card-body py-5">
+                Tổng đơn hàng
+                <h3>@ViewBag.TongDonHang</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card bg-success text-white h-100">
+            <div class="card-body py-5">
+                Online
+                <h3>@ViewBag.SoNguoiDangOnline</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card bg-danger text-white h-100">
+            <div class="card-body py-5">
+                Visit
+                <h3>@ViewBag.SoNguoiTruyCap</h3>
+            </div>
+        </div>
+    </div>
+</div>
